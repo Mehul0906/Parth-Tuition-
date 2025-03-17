@@ -378,7 +378,9 @@
 
 import React, { useState, useRef } from "react";
 import html2canvas from "html2canvas";
+// import logo from './img/fevicon.ico';
 import "./App.css"; // Separate CSS file for better readability
+
 
 function App() {
   const [name, setName] = useState("");
@@ -402,6 +404,7 @@ function App() {
       setFileName(file.name);
     }
   };
+  
 
   const handleDownload = () => {
     if (formRef.current) {
