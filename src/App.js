@@ -444,12 +444,12 @@ function App() {
         </div>
         <div className="Hexagonfirst">
           <div className="hexagon" style={{ backgroundImage: image ? `url(${image})` : "none" }}></div>
-          <h3 className="boardText" style={{color:"#b81208"}}>ધોરણ ૧૦ હોય કે ૧૨ બોર્ડના વર્ષ માટે તો 'પાર્થ' જ</h3>
+          <h3 className="boardText" style={{color:"#b81208"}}>ધોરણ ૧૦ હોય કે ૧૨ બોર્ડના વર્ષ માટે તો <br></br> 'પાર્થ' જ</h3>
         </div>
         <div className="card1">
         <div className="NameinputFirst">
           <input type="text" placeholder="" value={submittedName} readOnly className="nameInput" />
-          <p className="note" style={{color:"#196a98"}}>મને એ વાતનો આનંદ છે કે <br></br> મે પાર્થ પસંદ કર્યું.</p>
+          <p className="note" style={{color:"#196a98"}}>મને એ વાતનો આનંદ છે કે <br></br> <span style={{fontSize:"40px"}}> મે પાર્થ પસંદ કર્યું.</span></p>
         </div>
         <div className="contactBoxContainer">
           <div className="contactBox">પુણાગામ - ૮૭૫૮૭૫૦૫૦૧</div>

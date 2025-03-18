@@ -26,9 +26,9 @@
 .boardText
 {
   /* color: "#007bff"; */
-  font-size: 30px;
+  font-size: 40px;
   font-weight: bold;
-  margin-top: 12%;
+  /* margin-top: 12%; */
   margin-left: 3%;
 }
 
@@ -140,7 +140,7 @@
 .hexagon {
 
   width: 200px;
-  height: 195px;
+  height: 190px;
   background-color: #b4d7fd;
   /* opacity: 0.2; */
   /* border: 1px solid #007bff; */
@@ -236,6 +236,15 @@
 @media (max-width: 480px) {
   .sidebar {
     width: 80%;
+  }
+  .card::after
+  {
+   display: none;
+  }
+  .card1::after
+  {
+   /* display: none; */
+   top: 25%;
   }
   .input
   {
