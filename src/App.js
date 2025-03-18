@@ -378,6 +378,7 @@
 
 import React, { useState, useRef } from "react";
 import html2canvas from "html2canvas";
+import Hexagon from 'react-hexagon'
 // import logo from './img/fevicon.ico';
 import "./App.css"; // Separate CSS file for better readability
 
@@ -390,6 +391,7 @@ function App() {
   const formRef = useRef(null);
 
   const handleNameChange = (e) => setName(e.target.value);
+
   const handleNameSubmit = (e) => {
     e.preventDefault();
     setSubmittedName(name);
@@ -417,7 +419,6 @@ function App() {
       });
     }
   };
-
   return (
     <div className="container">
       <div className="sidebar">
@@ -434,18 +435,21 @@ function App() {
       </div>
 
       <div className="card" ref={formRef}>
+        <div className="Card-Bg">
         <div className="CardSecond">
           <img src="./img/Logo.png" alt="Logo" className="logo" />
           <h1 className="heading" style={{color:"#3d4099"}}>પાર્થ નોલેજ ઇન્સ્ટિટ્યૂટ</h1>
         </div>
-        <h2 className="subtitle" style={{color:"#007bff",fontSize:"32px"}}>આ સંસ્થા સાથે મારો અનુભવ <br></br> ખૂબ સારો રહ્યો.</h2>
+        <h2 className="subtitle" style={{color:"#196a98",fontSize:"32px"}}>આ સંસ્થા સાથે મારો અનુભવ <br></br> ખૂબ સારો રહ્યો.</h2>
+        </div>
         <div className="Hexagonfirst">
           <div className="hexagon" style={{ backgroundImage: image ? `url(${image})` : "none" }}></div>
           <h3 className="boardText" style={{color:"#b81208"}}>ધોરણ ૧૦ હોય કે ૧૨ બોર્ડના વર્ષ માટે તો 'પાર્થ' જ</h3>
         </div>
+        <div className="card1">
         <div className="NameinputFirst">
-          <input type="text" placeholder="નામ" value={submittedName} readOnly className="nameInput" />
-          <p className="note" style={{color:"#007bff"}}>મને એ વાતનો આનંદ છે કે <br></br> મે પાર્થ પસંદ કર્યું.</p>
+          <input type="text" placeholder="" value={submittedName} readOnly className="nameInput" />
+          <p className="note" style={{color:"#196a98"}}>મને એ વાતનો આનંદ છે કે <br></br> મે પાર્થ પસંદ કર્યું.</p>
         </div>
         <div className="contactBoxContainer">
           <div className="contactBox">પુણાગામ - ૮૭૫૮૭૫૦૫૦૧</div>
@@ -453,7 +457,7 @@ function App() {
           <div className="contactBox">યોગીચોક - ૭૫૭૫૮૩૮૨૮૧</div>
           <div className="contactBox">વરુછોક - ૯૬૨૪૨૫૨૪૨૫</div>
         </div>
-       
+        </div>
       </div>
     </div>
   );

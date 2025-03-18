@@ -70,8 +70,9 @@
   width: 30%;
   height:20px;
   border: 2px solid #007bff;
-  border-radius: 15px;
+  border-radius: 5px;
   padding: 10px;
+  text-align: center;
   /* margin-bottom: 10px; */
   /* margin-top: 10%; */
 }
@@ -117,17 +118,32 @@
 .card {
   width: 45%;
   height: auto;
-  /* padding: 20px; */
-  background-color: white;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
-
+.card::after {
+  content: "";
+  position: absolute;
+  top: -5%;
+  left: 75%;
+  width: 50%;
+  height: 100%;
+  background: url('../public/img/Polygon.png') no-repeat top right;
+  background-size: contain;
+  clip-path: polygon(0% 0%, 50% 0%, 50% 100%, 0% 100%);
+  opacity: 0.2; /* Light effect */
+}
 .hexagon {
+
   width: 200px;
   height: 195px;
-  border: 4px solid #007bff;
+  background-color: #b4d7fd;
+  /* opacity: 0.2; */
+  /* border: 1px solid #007bff; */
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   margin: 20px auto;
   margin-left: 13px;
@@ -140,6 +156,28 @@
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
+}
+.card1 {
+  /* width: 45%; */
+  /* height: auto; */
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+  /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); */
+  /* text-align: center; */
+}
+.card1::after {
+  content: "";
+  position: absolute;
+  top: -25%;
+  right: 67.5%;
+  width: 65%;
+  height: 325px;
+  background: url('../public/img/Polygon.png') no-repeat top;
+  background-size: contain;
+  clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 50% 100%);
+  opacity: 0.2; /* Light effect */
 }
 .note
 {
@@ -155,7 +193,7 @@
 }
 
 .contactBox {
-  background: #007bff;
+  background: #196a98;
   color: white;
   padding: 10px;
   border-radius: 5px;
